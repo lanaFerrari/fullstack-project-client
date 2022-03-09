@@ -1,8 +1,19 @@
 import "./App.scss";
-import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Header } from "./Components/Header/Header";
+import { CourseList } from "./Containers/Home/CourseList";
 
 function App() {
-  return <div>Alo</div>;
+  return (
+    <>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<CourseList />}></Route>
+        </Routes>
+      </Router>
+    </>
+  );
 }
 
 export default App;
